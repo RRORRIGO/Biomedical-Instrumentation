@@ -1,44 +1,41 @@
+
 #include <Arduino.h>
 #include <math.h>
 
-// Pin PWM seleccionado
-const int pwmPin = 25;
+// Pin DAC del ESP32 clásico
+const int dacPin = 25;
 
-// Frecuencia de variación de la señal (Hz)
+// Frecuencia de la señal senoidal
 const float frecuencia = 2.0;
 
-// Intervalo de actualización del PWM (ms)
-const unsigned long intervalo = 5;
+// Intervalo de actualización
+const unsigned long intervalo = 2;
 
 unsigned long tiempoAnterior = 0;
 
 void setup() {
-  pinMode(pwmPin, OUTPUT);
+  // No se necesita pinMode() para dacWrite()
 }
 
 void loop() {
   unsigned long tiempoActual = millis();
 
-  // Actualizar PWM cada 5 ms
   if (tiempoActual - tiempoAnterior >= intervalo) {
     tiempoAnterior = tiempoActual;
 
-    // Tiempo transcurrido en segundos
+    // Tiempo en segundos
     float tiempo = tiempoActual / 1000.0;
 
-    // Calcular fase de la función seno
-    float fase = 2.0 * PI * frecuencia * tiempo;
+    // Calcular seno
+    float seno = sin(2.0 * PI * frecuencia * tiempo);
 
-    // Función seno: rango -1 a 1
-    float seno = sin(fase);
+    // Convertir seno (-1 a 1) a DAC (0 a 255)
+    int valorDAC = (int)(127.5 + 127.5 * seno);
 
-    // Convertir a rango 0-255
-    int duty = (int)(127.5 + 127.5 * seno);
+    // Limitar el valor
+    valorDAC = constrain(valorDAC, 0, 255);
 
-    // Asegurar que el valor esté dentro del rango permitido
-    duty = constrain(duty, 0, 255);
-
-    // Aplicar ciclo de trabajo PWM
-    analogWrite(pwmPin, duty);
+    // Escribir salida analógica
+    dacWrite(dacPin, valorDAC);
   }
 }
