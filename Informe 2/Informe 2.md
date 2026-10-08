@@ -1,5 +1,5 @@
 
-<center>
+<div align="center">
   
 ### **UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS** 
 
@@ -15,9 +15,6 @@ _Amplificador de Instrumentación Biomédico — Caracterización y visualizaci�
 
 #### **Integrantes** 
 
-</center>
-
-<div align="center">
   
 |**N.°**|**Apellidos y nombres**|**Código**|
 |---|---|---|
@@ -25,17 +22,14 @@ _Amplificador de Instrumentación Biomédico — Caracterización y visualizaci�
 |2|Mamani Chavez Lizbeth Rocio|24190105|
 |3|Gironzini Córdova, Enrico Salvatore|23190373|
 
-</div>
 
-<center>
-  
 **Grupo / horario:** Grupo A: 8 - 10 pm 
 
 **Fecha:** 14 de septiembre de 2026 
 
 **Docente:** Maria Elisia Armas Alvarado 
 
-</center>
+</div>
 
 
 
