@@ -1,5 +1,5 @@
 
-
+<center>
 ### **UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS** 
 
 ##### **FACULTAD DE INGENIERÍA ELECTRÓNICA Y ELÉCTRICA** 
@@ -28,7 +28,7 @@ _Amplificador de Instrumentación Biomédico — Caracterización y visualizaci�
 
 **Docente:** Maria Elisia Armas Alvarado 
 
-
+</center>
 
 
 
