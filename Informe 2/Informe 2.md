@@ -151,6 +151,8 @@ Para caracterizar la ganancia diferencial, se seleccionaron cuatro posiciones de
 
 **Tabla 1. Caracterización de la ganancia diferencial del AI.** 
 
+<div align="center">
+  
 |**Rg real**<br>**(Ω)**|**Vin(pp)**<br>**(mV)**|**Vout(pp)**<br>**(mV)**|**Ganancia**<br>**experimental**|**Ganancia**<br>**teórica**|**Observaciones**|
 |---|---|---|---|---|---|
 |10007|31.2|51.2|1.64|2.962|Ganancia mínima medida; salida inferior a la esperada.|
@@ -158,7 +160,7 @@ Para caracterizar la ganancia diferencial, se seleccionaron cuatro posiciones de
 |2520|28|149|5.32|8.793|Aumento de la ganancia al disminuir Rg; resultado inferior al<br>teórico.|
 |2.4|32|17400|543.75|8184.333|Probable saturación por la elevada ganancia; salida próxima al<br>límite de alimentación.|
 
-
+</div>
 
 
 
@@ -208,6 +210,8 @@ Posteriormente, se calculó la relación de rechazo al modo común (CMRR), expre
 
 **Tabla 2. Ganancia en modo común y cálculo de CMRR.** 
 
+<div align="center">
+  
 |**Medición**|**Valor**|**Observaciones**|
 |---|---|---|
 |Ganancia diferencial máxima|543.75|Obtenida con Rg = 2,4 Ω; posible saturación.|
@@ -218,7 +222,7 @@ Posteriormente, se calculó la relación de rechazo al modo común (CMRR), expre
 |CMRR (dB)|114,039|Valor calculado, condicionado por la posible saturación en la<br>medición diferencial.|
 
 
-
+</div>
 
 
 _Figura 12. Medición en el osciloscopio de los voltaje pico-pico de Vin y Vout para Rg = 2.4 Ohm, configuración modo común (pin 3 y pin 5)_ 
@@ -239,6 +243,8 @@ Se empleó el osciloscopio virtual para observar la forma de onda acondicionada 
 
 Código del Arduino Mega: 
 
+<div align="center">
+  
 |#include <Arduino.h>|unsigned long ahora = millis();|
 |---|---|
 |#include <math.h>|if (ahora - tiempoAnterior >= intervalo)|
@@ -256,20 +262,20 @@ Código del Arduino Mega:
 |}|// Enviar el voltaje por comunicación serial|
 |void loop() {|Serial.println(voltaje, 3);<br>}}|
 
-
+</div>
 
 
 
 **Tabla 3. Verificación de la referencia bufferizada y del nodo sumador.** 
 
-
+<div align="center">
 
 |**Medición**|**Valor esperado **|**Valor medido**|**Observaciones**|
 |---|---|---|---|
 |Salida del buffer respecto<br>a GND|<br>2.5V|2.5V|Coincide con el valor teórico, lo que verifica el<br>funcionamiento de la referencia bufferizada.|
 |Rango del nodo sumador<br>(verificado con<br>osciloscopio, sin recorte)|0-5V|0-1.251 V|La tensión máxima se encuentra dentro del rango<br>permitido por el ADC del Arduino Mega.|
 
-
+</div>
 
 
 
@@ -537,6 +543,8 @@ También sería importante mejorar el rechazo al ruido de 50/60 Hz y considerar 
 
 **Tabla 4. Lista de materiales y componentes utilizados.** 
 
+<div align="center">
+  
 |**Componente (materiales y equipos)**|**Cantidad utilizada**|**Marca / modelo u observación**|
 |---|---|---|
 |TL084N (amplificador operacional cuádruple JFET)|1|Genérica|
@@ -558,16 +566,18 @@ También sería importante mejorar el rechazo al ruido de 50/60 Hz y considerar 
 |Osciloscopio|1||
 |Puntas de osciloscopio|2||
 
-
+</div>
 
 **Tabla 5. Código fuente y enlace de repositorio.** 
 
+<div align="center">
+  
 |**Archivo / módulo**<br>**de código**|**Descripción breve**|**Plataforma**|**Enlace al repositorio**|
 |---|---|---|---|
 |ESP32|Señal sinusoidal para la parte<br>experimental|GITHUB|https://github.com/RRORRIGO/Biome<br>dical-Instrumentation/blob/master/Infor<br>me%202/Code_ESp32_sinoidal.cpp|
 |Arduino Mega|Señal sinusoidal para la parte de<br>simulación|GITHUB|https://github.com/RRORRIGO/Biome<br>dical-Instrumentation/blob/master/Infor<br>me%202/Code_Mega_2560.cpp|
 
-
+</div>
 
 
 
