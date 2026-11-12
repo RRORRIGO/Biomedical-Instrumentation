@@ -1,0 +1,15 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\RODRIGO\OneDrive\1. Sexto ciclo\Instr Bio\Informe 4\Simulación\Lab4_LTspice_archivos\Lab4_D_con_acoplamiento.cir
+Start Time: Wed Nov 11 03:25:49 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 3.714 seconds.
+Total iterations: 1440773
+
+Files loaded:
+C:\Users\RODRIGO\OneDrive\1. Sexto ciclo\Instr Bio\Informe 4\Simulación\Lab4_LTspice_archivos\Lab4_D_con_acoplamiento.cir
+

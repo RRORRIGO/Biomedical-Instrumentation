@@ -1,0 +1,22 @@
+* Laboratorio 4 - D_con_acoplamiento; fuente PWL desde semg.h
+VEMG gpio 0 PWL file=semg_pwl_15s.txt
+CIN gpio vin 100n
+RBIAS vin 0 1Meg
+* Modelo APROXIMADO de amplificadores para validar conexiones; NO es TL084N real.
+* Sustituir por macromodelo TL084N del fabricante para resultados realistas.
+VPLUS vp 0 9
+VMINUS vn 0 -9
+CDEC1 vp 0 100n
+CDEC2 vn 0 100n
+* A1: entrada no inversora VIN, entrada inversora VR, salida OA1
+BAMP1 oa1 0 V=limit(100000*(V(vin)-V(vr)),-7.5,7.5)
+D1 oa1 vr D4148
+RRECT vr 0 10k
+* A2 seguidor
+BAMP2 buff 0 V=limit(100000*(V(vr)-V(buff)),-7.5,7.5)
+RFILT buff ve 10k
+CFILT ve 0 10u
+.model D4148 D(Is=2.52n Rs=0.568 N=1.906 Cjo=4p M=0.03 Vj=0.75)
+.tran 0 15 0 50u
+.save V(gpio) V(vin) V(vr) V(ve) V(oa1) V(buff)
+.end

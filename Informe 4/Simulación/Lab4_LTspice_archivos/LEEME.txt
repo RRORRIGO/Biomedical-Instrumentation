@@ -1,0 +1,11 @@
+LABORATORIO 4 - LTspice
+
+1. Extrae todos los archivos en una misma carpeta.
+2. Abre Lab4_B_sin_acoplamiento.cir en LTspice y pulsa Run.
+3. Haz clic en los nodos gpio, vin, vr y ve o usa Plot Settings > Add Trace.
+4. Abre Lab4_D_con_acoplamiento.cir y repite.
+5. semg_pwl_15s.txt contiene muestras originales; semg_pwl_150s.txt usa factor de lentitud 10. Para usarlo cambia el nombre del archivo PWL en el netlist y .tran 0 150 0 500u.
+
+ATENCION: los amplificadores BAMP1 y BAMP2 son aproximaciones comportamentales, NO el modelo del TL084N. Las tensiones de alimentacion estan definidas, pero este modelo no reproduce todas las limitaciones de entrada/salida, velocidad, recuperacion de saturacion, etc. Para informe con TL084N sustituir por el modelo SPICE del fabricante.
+La guia pide TL084N real y opamps 3 y 4 configurados como seguidores a GND. En estos netlists comportamentales no se incluyen porque no afectan los nodos de señal.
+El DAC se aproxima como 3.3*SEMG/255, no es una calibracion de tu hardware.
