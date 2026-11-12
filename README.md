@@ -17,6 +17,9 @@ Se rearmó el amplificador de instrumentación de tres operacionales con TL084N 
 ## Simulador de sEMG a partir de registros reales
 
 ### Resumen
+En este laboratorio se desarrolló un simulador de señales electromiográficas de superficie (sEMG) utilizando registros reales de la base de datos GRABMyo. Mediante Python en Google Colab, se procesaron y concatenaron tres condiciones musculares: reposo, cierre de mano y extensión del índice. La secuencia de 30 720 muestras se escaló a 8 bits y se reprodujo mediante el DAC del ESP32 a 2048 Hz. Se evidenció que el escalado global permitió conservar las diferencias de amplitud entre las actividades musculares, obteniéndose una señal útil para la validación de sistemas de adquisición de bioseñales.
+
+## Extracción de la envolvente de la sEMG simulada
+
+### Resumen
 Proximamente
-
-
