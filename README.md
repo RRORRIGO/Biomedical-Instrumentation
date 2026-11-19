@@ -22,4 +22,9 @@ En este laboratorio se desarrolló un simulador de señales electromiográficas 
 ## Extracción de la envolvente de la sEMG simulada
 
 ### Resumen
+En este laboratorio se implementó un circuito para obtener la envolvente de una señal sEMG simulada mediante un ESP32, un rectificador de precisión y un filtro RC pasa-bajos. Se evaluó la influencia de la componente continua. Al eliminar dicha componente, se logró diferenciar los niveles de reposo, cierre de mano y extensión del índice. Se concluyó que el acoplamiento capacitivo es fundamental para obtener una envolvente representativa de la actividad muscular.
+
+## Detección de activación por umbral con histéresis
+
+### Resumen
 Proximamente
