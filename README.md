@@ -1,7 +1,7 @@
 # Biomedical-Instrumentation
  This repository contains the formal reports and documentation developed during the Biomedical Instrumentation course.
 
-## Amplificador de Instrumentación Biomédico - Fuente y armado
+## Informe 1: Amplificador de Instrumentación Biomédico - Fuente y armado
 
 
 
@@ -9,22 +9,22 @@
 En la presente experiencia se implementó y caracterizó una etapa de acondicionamiento analógico basada en un amplificador de instrumentación discreto de tres amplificadores operacionales (TL084N) alimentado por una fuente dual de  9V. Mediante la selección y apareo manual de resistencias se redujo la dispersión a 0.08 k, logrando un offset de salida de 0.000mV a -0.001mV con las entradas en corto. Para validar el funcionamiento, se sintetizó una bioseñal mediante un ESP32 (PWM filtrado a 2Hz y atenuado), obteniendo exitosamente una onda senoidal suave de 7.68mVpp, dentro del rango objetivo (5-15 mVpp) sin saturar la salida. 
 
 
-## Amplificador de Instrumentación Biomédico — Caracterización y visualización
+## Informe 2: Amplificador de Instrumentación Biomédico — Caracterización y visualización
 
 ### Resumen
 Se rearmó el amplificador de instrumentación de tres operacionales con TL084N y se midió su ganancia diferencial para cuatro valores de Rg (10007, 5023, 2520 y 2,4 Ω), comparándola con la teórica. Con las entradas unidas se midió la ganancia en modo común y se estimó el CMRR. Se incorporó una referencia de tierra virtual bufferizada con LM324N y un nodo sumador para adaptar la salida al ADC; esta etapa se simuló en Proteus con un Arduino Mega 2560. La ganancia aumentó al disminuir Rg, aunque siempre quedó por debajo de la teórica (con saturación en Rg = 2,4 Ω), y el CMRR estimado fue de unos 114 dB. La referencia entregó 2,5 V y la señal acondicionada se mantuvo dentro del rango del ADC.
 
-## Simulador de sEMG a partir de registros reales
+## Informe 3: Simulador de sEMG a partir de registros reales
 
 ### Resumen
 En este laboratorio se desarrolló un simulador de señales electromiográficas de superficie (sEMG) utilizando registros reales de la base de datos GRABMyo. Mediante Python en Google Colab, se procesaron y concatenaron tres condiciones musculares: reposo, cierre de mano y extensión del índice. La secuencia de 30 720 muestras se escaló a 8 bits y se reprodujo mediante el DAC del ESP32 a 2048 Hz. Se evidenció que el escalado global permitió conservar las diferencias de amplitud entre las actividades musculares, obteniéndose una señal útil para la validación de sistemas de adquisición de bioseñales.
 
-## Extracción de la envolvente de la sEMG simulada
+## Informe 4: Extracción de la envolvente de la sEMG simulada
 
 ### Resumen
 En este laboratorio se implementó un circuito para obtener la envolvente de una señal sEMG simulada mediante un ESP32, un rectificador de precisión y un filtro RC pasa-bajos. Se evaluó la influencia de la componente continua. Al eliminar dicha componente, se logró diferenciar los niveles de reposo, cierre de mano y extensión del índice. Se concluyó que el acoplamiento capacitivo es fundamental para obtener una envolvente representativa de la actividad muscular.
 
-## Detección de activación por umbral con histéresis
+## Informe 5: Detección de activación por umbral con histéresis
 
 ### Resumen
 Proximamente
